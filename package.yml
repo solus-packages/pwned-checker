@@ -1,0 +1,23 @@
+name       : pwned-checker
+version    : 0.1.8
+release    : 1
+source     :
+    - https://github.com/PlugaruT/pwned-checker/archive/0.1.8.tar.gz : ba3ea4a8bdfae1d645d881f20cb4f26825fa8ba6046142d61259cbdf833a48e5
+license    : GPL-3.0-or-later
+component  : security
+summary    : Simple application for interacting with haveibeenpwned API.
+description: |
+   Simple application for checking if a password is found in Pwned Passwords repository.
+builddeps  :
+    - pkgconfig(granite)
+    - pkgconfig(gtk+-3.0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libsoup-2.4)
+    - meson
+    - vala
+setup      : |
+    %meson_configure
+build      : |
+    %meson_build
+install    : |
+    %meson_install
